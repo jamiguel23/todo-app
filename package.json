@@ -31,16 +31,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jamiguel23/todo-app.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/jamiguel23/todo-app/issues"
-  },
-  "homepage": "https://github.com/jamiguel23/todo-app#readme"
+  }
+  
 }
