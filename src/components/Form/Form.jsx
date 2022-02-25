@@ -1,52 +1,55 @@
 import React from "react";
 import { Button, Card, Elevation } from "@blueprintjs/core";
 
-function Form({handleChange, handleSubmit}) {
+function Form({ handleChange, handleSubmit }) {
   return (
-    <div style={{    display: 'flex', justifyContent: 'center'}}>
+    <div style={{ display: "flex", justifyContent: "center" }}>
+      <Card
+        style={{ width: "1000px", margin: "30px" }}
+        interactive={true}
+        elevation={Elevation.TWO}
+      >
+        <form onSubmit={handleSubmit}>
+          <h2>Add To Do Item</h2>
 
-    <Card style={{width: '1000px', margin: '30px'}} interactive={true} elevation={Elevation.TWO}>
-      <form onSubmit={handleSubmit}>
-        <h2>Add To Do Item</h2>
-
-        <label>
-          <span>To Do Item</span>
-          <input
-            onChange={handleChange}
-            name="text"
-            type="text"
-            placeholder="Item Details"
+          <label>
+            <span>To Do Item</span>
+            <input
+              onChange={handleChange}
+              name="text"
+              type="text"
+              placeholder="Item Details"
             />
-        </label>
+          </label>
 
-        <label>
-          <span>Assigned To</span>
-          <input
-            onChange={handleChange}
-            name="assignee"
-            type="text"
-            placeholder="Assignee Name"
+          <label>
+            <span>Assigned To</span>
+            <input
+              onChange={handleChange}
+              name="assignee"
+              type="text"
+              placeholder="Assignee Name"
             />
-        </label>
+          </label>
 
-        <label>
-          <span>Difficulty</span>
-          <input
-            onChange={handleChange}
-            defaultValue={3}
-            type="range"
-            min={1}
-            max={5}
-            name="difficulty"
+          <label>
+            <span>Difficulty</span>
+            <input
+              onChange={handleChange}
+              defaultValue={3}
+              type="range"
+              min={1}
+              max={5}
+              name="difficulty"
             />
-        </label>
+          </label>
 
-        <label>
-          <button type="submit">Add Item</button>
-        </label>
-      </form>
-    </Card>
-            </div>
+          <label>
+            <button type="submit">Add Item</button>
+          </label>
+        </form>
+      </Card>
+    </div>
   );
 }
 
